@@ -1,0 +1,113 @@
+\documentclass[11pt,a4paper,oneside]{article}
+
+\usepackage[margin=1.7cm]{geometry}
+
+\usepackage[obeyspaces,hyphens]{url}
+%\usepackage[anythingbreaks]{breakurl}
+\setlength\parindent{0pt}
+\setlength{\parskip}{0.5em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\pagenumbering{gobble}
+
+\usepackage[pdftex,
+            pdfauthor={Christopher Frantz},
+            pdfcreator={pdflatex},
+			hidelinks]
+{hyperref}
+
+\fancyhead[C]{{\LARGE \textbf{Vim Cheat Sheet}}}
+\fancyfoot[R]{{\small \normalfont C.~Frantz (v0.1, July 2016)}}
+
+\renewcommand{\familydefault}{\ttdefault}
+
+% Shows current layout if \layout is called in document
+\usepackage{layout}
+
+\footskip=45pt
+
+\begin{document}
+
+%\layout
+
+\begin{table}
+\begin{tabular}{p{4.5cm} l}
+\multicolumn{2}{l}{\underline{Opening Files}} \\
+ %& \\
+vi filename & Opens new or existing file \\
+vi -r filename & Recover file from crashed session \\
+vi + filename & Place the cursor on last line of file \\
+vi +n filename & Place the cursor on line `n' of file \\
+vi +/pat filename & Place cursor on line with first occurrence of `pat'tern \\
+ & \\[-1.5ex]
+\multicolumn{2}{l}{\underline{Modes}} \\
+ %& \\
+ Esc & Switch to NORMAL mode \\
+ i (or I) & Switch to INSERT mode \\
+ R & Switch to REPLACE mode \\
+ v & Switch to VISUAL mode \\
+ %r & Replace individual character and switch back to COMMAND mode \\
+ & \\[-1.5ex]
+\multicolumn{2}{l}{\underline{Closing Files}} \\
+ %& \\
+:w & Write the file to disk, but don't quit \\
+:w! & Write the file to disk (even if read-only), but don't quit \\
+:wq & Write the file to disk and quit \\
+:wq! & Write the file to disk even if read-only and quit \\
+:q & Quit the file (only if no changes) \\
+:q! & Quit, even if changes exist (changes are lost) -- panic command \\
+ & \\[-1.5ex]
+\multicolumn{2}{l}{\underline{Navigating Files}} \\
+ %& \\
+h (Left Arrow) & Move 1 space backwards \\
+j (Down Arrow) & Move down 1 line \\
+k (Up Arrow) & Move up 1 line \\
+l (Right Arrow) & Move 1 space forward \\
+\^{} & Move to beginning of line \\
+\$ & Move to end of line \\
+A & Move to end of line, change to insert mode \\
+w & Move cursor to start of next word \\
+W & Same as `w' \\
+b & Move cursor to start of previous word \\
+B & Same as `b' \\
+:n & Go to line number `n' in the file \\
+gg & Go to first line in file \\
+G & Go to last line in file \\
+:set number (:set nu) & Display line numbers \\
+ & \\[-1.5ex]
+\multicolumn{2}{l}{\underline{Editing}} \\
+ %& \\
+o & Add a line below cursor and switch to INSERT mode \\
+x (or `Del' key) & Delete character \\
+D & Delete (Cut) line from right of cursor to end of line \\
+dd & Delete (Cut) entire line \\
+u & Undo last edit or restore current line \\
+yy & Yank (Copy) current line \\
+yw & Yank (Copy) individual word \\
+p & Put yanked (Paste) text before the cursor \\
+ & \\[-1.5ex]
+\multicolumn{2}{l}{\underline{Searching}} \\
+ %& \\
+/pattern & Search for `pattern' in the file (forward search) \\
+?pattern & Search for `pattern' in the file (backward search) \\
+n & Find next occurrence of pattern (forward search) \\
+N & Find previous occurrence of pattern (backward search) \\
+ & \\[-1.5ex]
+\multicolumn{2}{l}{\underline{Find \& Replace}} \\
+ %& \\
+:\%s/foo/bar/g & Find `foo' and replace with `bar' across all lines \\
+:s/foo/bar/g & Find `foo' and replace with `bar' in current line \\
+ & \\[-1.5ex]
+\multicolumn{2}{l}{\underline{Selecting blocks}} \\
+ %& \\
+v & Activates selection of text by lines (visual mode) \\
+V & Activates selection of text by columns (visual mode) \\
+
+\end{tabular}
+
+\end{table}
+
+
+\end{document}
