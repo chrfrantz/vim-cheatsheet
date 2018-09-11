@@ -19,7 +19,7 @@
 {hyperref}
 
 \fancyhead[C]{{\LARGE \textbf{Vim Cheat Sheet}}}
-\fancyfoot[R]{{\small \normalfont C.~Frantz (v0.1, July 2016)}}
+\fancyfoot[R]{{\small \normalfont C.~Frantz (v0.2, September 2018)}}
 
 \renewcommand{\familydefault}{\ttdefault}
 
@@ -34,7 +34,7 @@
 
 \begin{table}
 \begin{tabular}{p{4.5cm} l}
-\multicolumn{2}{l}{\underline{Opening Files}} \\
+\multicolumn{2}{l}{\underline{Opening Files} (command line)} \\
  %& \\
 vi filename & Opens new or existing file \\
 vi -r filename & Recover file from crashed session \\
@@ -50,7 +50,7 @@ vi +/pat filename & Place cursor on line with first occurrence of `pat'tern \\
  v & Switch to VISUAL mode \\
  %r & Replace individual character and switch back to COMMAND mode \\
  & \\[-1.5ex]
-\multicolumn{2}{l}{\underline{Closing Files}} \\
+\multicolumn{2}{l}{\underline{Closing Files} (NORMAL mode)} \\
  %& \\
 :w & Write the file to disk, but don't quit \\
 :w! & Write the file to disk (even if read-only), but don't quit \\
@@ -59,7 +59,7 @@ vi +/pat filename & Place cursor on line with first occurrence of `pat'tern \\
 :q & Quit the file (only if no changes) \\
 :q! & Quit, even if changes exist (changes are lost) -- panic command \\
  & \\[-1.5ex]
-\multicolumn{2}{l}{\underline{Navigating Files}} \\
+\multicolumn{2}{l}{\underline{Navigating Files} (NORMAL mode)} \\
  %& \\
 h (Left Arrow) & Move 1 space backwards \\
 j (Down Arrow) & Move down 1 line \\
@@ -77,7 +77,7 @@ gg & Go to first line in file \\
 G & Go to last line in file \\
 :set number (:set nu) & Display line numbers \\
  & \\[-1.5ex]
-\multicolumn{2}{l}{\underline{Editing}} \\
+\multicolumn{2}{l}{\underline{Editing} (NORMAL mode)} \\
  %& \\
 o & Add a line below cursor and switch to INSERT mode \\
 x (or `Del' key) & Delete character \\
@@ -88,19 +88,19 @@ yy & Yank (Copy) current line \\
 yw & Yank (Copy) individual word \\
 p & Put yanked (Paste) text before the cursor \\
  & \\[-1.5ex]
-\multicolumn{2}{l}{\underline{Searching}} \\
+\multicolumn{2}{l}{\underline{Searching} (NORMAL mode)} \\
  %& \\
 /pattern & Search for `pattern' in the file (forward search) \\
 ?pattern & Search for `pattern' in the file (backward search) \\
 n & Find next occurrence of pattern (forward search) \\
 N & Find previous occurrence of pattern (backward search) \\
  & \\[-1.5ex]
-\multicolumn{2}{l}{\underline{Find \& Replace}} \\
+\multicolumn{2}{l}{\underline{Find \& Replace} (NORMAL mode)} \\
  %& \\
 :\%s/foo/bar/g & Find `foo' and replace with `bar' across all lines \\
 :s/foo/bar/g & Find `foo' and replace with `bar' in current line \\
  & \\[-1.5ex]
-\multicolumn{2}{l}{\underline{Selecting blocks}} \\
+\multicolumn{2}{l}{\underline{Selecting blocks} (NORMAL or VISUAL mode)} \\
  %& \\
 v & Activates selection of text by lines (visual mode) \\
 V & Activates selection of text by columns (visual mode) \\
