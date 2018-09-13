@@ -1,6 +1,6 @@
 \documentclass[11pt,a4paper,oneside]{article}
 
-\usepackage[margin=1.7cm]{geometry}
+\usepackage[margin=1.5cm,bottom=2cm]{geometry}
 
 \usepackage[obeyspaces,hyphens]{url}
 %\usepackage[anythingbreaks]{breakurl}
@@ -19,7 +19,7 @@
 {hyperref}
 
 \fancyhead[C]{{\LARGE \textbf{Vim Cheat Sheet}}}
-\fancyfoot[R]{{\small \normalfont C.~Frantz (v0.2, September 2018)}}
+\fancyfoot[R]{{\small \normalfont C.~Frantz (v0.3, September 2018)}}
 
 \renewcommand{\familydefault}{\ttdefault}
 
@@ -33,13 +33,13 @@
 %\layout
 
 \begin{table}
-\begin{tabular}{p{4.5cm} l}
+\begin{tabular}{p{5.5cm} l}
 \multicolumn{2}{l}{\underline{Opening Files} (command line)} \\
  %& \\
 vi filename & Opens new or existing file \\
 vi -r filename & Recover file from crashed session \\
-vi + filename & Place the cursor on last line of file \\
-vi +n filename & Place the cursor on line `n' of file \\
+vi + filename & Place cursor on last line of file \\
+vi +n filename & Place cursor on line `n' of file \\
 vi +/pat filename & Place cursor on line with first occurrence of `pat'tern \\
  & \\[-1.5ex]
 \multicolumn{2}{l}{\underline{Modes}} \\
@@ -52,12 +52,12 @@ vi +/pat filename & Place cursor on line with first occurrence of `pat'tern \\
  & \\[-1.5ex]
 \multicolumn{2}{l}{\underline{Closing Files} (NORMAL mode)} \\
  %& \\
-:w & Write the file to disk, but don't quit \\
-:w! & Write the file to disk (even if read-only), but don't quit \\
-:wq & Write the file to disk and quit \\
-:wq! & Write the file to disk even if read-only and quit \\
-:q & Quit the file (only if no changes) \\
-:q! & Quit, even if changes exist (changes are lost) -- panic command \\
+:w & Write the file to disk, but don't quit Vim \\
+:w! & Write the file to disk (even if read-only), but don't quit Vim \\
+:wq & Write the file to disk and quit Vim \\
+:wq! & Write the file to disk, even if read-only and quit Vim\\
+:q & Quit Vim (only if no changes) \\
+:q! & Quit Vim, even if changes exist (changes are lost) -- panic cmd \\
  & \\[-1.5ex]
 \multicolumn{2}{l}{\underline{Navigating Files} (NORMAL mode)} \\
  %& \\
@@ -68,9 +68,9 @@ l (Right Arrow) & Move 1 space forward \\
 \^{} & Move to beginning of line \\
 \$ & Move to end of line \\
 A & Move to end of line, change to insert mode \\
-w (W punctiuation incl.) & Move cursor to start of next word \\
-b (B punctuation incl.) & Move cursor to start of previous word \\
-\% & move to next matching '()' '{}' '[]' \\
+w (`W' ignores punctuation) & Move cursor to start of next word or punctuation symbol \\
+b (`B' ignores punctuation) & Move cursor to start of previous word or punctuation symbol \\
+\% & Move to next matching '()', '{}', or '[]' \\
 :n & Go to line number `n' in the file \\
 gg & Go to first line in file \\
 G & Go to last line in file \\
