@@ -1,6 +1,6 @@
 \documentclass[11pt,a4paper,oneside]{article}
 
-\usepackage[margin=1.5cm,bottom=2cm]{geometry}
+\usepackage[margin=1.2cm,bottom=2cm]{geometry}
 
 \usepackage[obeyspaces,hyphens]{url}
 %\usepackage[anythingbreaks]{breakurl}
@@ -19,7 +19,7 @@
 {hyperref}
 
 \fancyhead[C]{{\LARGE \textbf{Vim Cheat Sheet}}}
-\fancyfoot[R]{{\small \normalfont C.~Frantz (v0.3, September 2018)}}
+\fancyfoot[R]{{\small \normalfont C.~Frantz (v0.4, September 2019)}}
 
 \renewcommand{\familydefault}{\ttdefault}
 
@@ -99,10 +99,11 @@ N & Find previous occurrence of pattern (backward search) \\
 :\%s/foo/bar/g & Find `foo' and replace with `bar' across all lines \\
 :s/foo/bar/g & Find `foo' and replace with `bar' in current line \\
  & \\[-1.5ex]
-\multicolumn{2}{l}{\underline{Selecting blocks} (NORMAL or VISUAL mode)} \\
+\multicolumn{2}{l}{\underline{Selecting text} (NORMAL or VISUAL mode)} \\
  %& \\
-v & Activates selection of text by lines (visual mode) \\
-V & Activates selection of text by columns (visual mode) \\
+v & Activates selection of text by character (visual mode) \\
+V & Activates selection of text by lines (visual mode) \\
+Ctrl-v & Activates selection of text by blocks (columns and characters) \\
 
 \end{tabular}
 
